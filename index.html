@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskTabernacle | Download App</title>
+    <style>
+        :root {
+            --bg-color: #000000;
+            --surface-color: #18181b;
+            --text-color: #f4f4f5;
+            --primary-color: #fbbf24;
+            --primary-hover: #f59e0b;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+            background-color: var(--surface-color);
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 40px rgba(251, 191, 36, 0.1);
+            border: 1px solid #27272a;
+        }
+
+        .icon-container {
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            box-shadow: 0 0 30px rgba(251, 191, 36, 0.3);
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.2); transform: scale(1); }
+            100% { box-shadow: 0 0 40px rgba(251, 191, 36, 0.6); transform: scale(1.02); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            background: linear-gradient(135deg, #fbbf24 0%, #fef3c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            color: #a1a1aa;
+            margin-top: 0.5rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .download-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 1rem 2rem;
+            border-radius: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-android {
+            background-color: var(--primary-color);
+            color: #000000;
+        }
+
+        .btn-android:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(251, 191, 36, 0.2);
+        }
+
+        .btn-ios {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 2px solid #3f3f46;
+        }
+
+        .btn-ios:hover {
+            border-color: #52525b;
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .note {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: #71717a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon-container">
+            <img src="../assets/images/icon.png" alt="TaskTabernacle Icon" class="app-icon">
+        </div>
+
+        <h1>TaskTabernacle</h1>
+        <p class="subtitle">Experience the ultimate productivity platform. Download the app for your device below.</p>
+
+        <div class="download-buttons">
+            <a href="landing-page/TaskTabernacle.apk" download class="btn btn-android" >
+                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.523 15.3414C17.523 16.0926 16.9142 16.7014 16.163 16.7014C15.4118 16.7014 14.803 16.0926 14.803 15.3414C14.803 14.5902 15.4118 13.9814 16.163 13.9814C16.9142 13.9814 17.523 14.5902 17.523 15.3414ZM8.08301 16.7014C8.83419 16.7014 9.44297 16.0926 9.44297 15.3414C9.44297 14.5902 8.83419 13.9814 8.08301 13.9814C7.33183 13.9814 6.72305 14.5902 6.72305 15.3414C6.72305 16.0926 7.33183 16.7014 8.08301 16.7014ZM17.8016 10.3705L19.4623 7.49392C19.5768 7.29524 19.5085 7.04169 19.3098 6.92724C19.1111 6.81279 18.8576 6.88107 18.7431 7.07976L17.0396 10.0315C15.5562 9.35122 13.9142 8.96637 12.1818 8.96637C10.4494 8.96637 8.80743 9.35122 7.324 10.0315L5.62052 7.07976C5.50607 6.88107 5.25252 6.81279 5.05383 6.92724C4.85514 7.04169 4.78687 7.29524 4.90132 7.49392L6.56203 10.3705C3.07673 12.2854 0.727051 15.8236 0.727051 19.8663H23.6366C23.6366 15.8236 21.2869 12.2854 17.8016 10.3705Z"/>
+                </svg>
+                Download for Android (APK)
+            </a>
+
+            <a href="#" class="btn btn-ios" style="opacity: 0.6; cursor: not-allowed;" onclick="event.preventDefault(); alert('The iOS App is currently in development and will be available soon.');">
+                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.09 2.31-.86 3.59-.8 1.51.05 2.53.72 3.26 1.8-2.61 1.52-2.12 5.09.84 6.27-.61 1.54-1.41 3.02-2.77 4.9zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" fill="currentColor"/>
+                </svg>
+                iOS Coming Soon
+            </a>
+        </div>
+
+        <p class="note">Note: For iOS, you must trust the developer profile in Settings > General > VPN & Device Management after installing.</p>
+    </div>
+
+</body>
+</html>
